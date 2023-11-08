@@ -1,0 +1,34 @@
+{
+  "name": "repopusher",
+  "version": "1.0.0",
+  "description": "This repository is a time-saver that allows you to push 2 or more Github Repositories using only one command !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "first-push": "npm run git-init && git add . && git commit -m \"first commit\" && git branch -M main && git remote add origin git@github.com:lanouvelleecole/RepoPusher.git && git push -u origin main",
+    "git-init": "rimraf .git && git init",
+    "push": "(git add . && git commit -m \"I'm a bigger pusher than Ice-T homie !!!\" && git push) || exit 0",
+    "push-all": "cd ./Repo1Name && npm run push && cd ../Repo2Name && npm run push && cd ../Repo3Name && npm run push && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanouvelleecole/ReposPusher.git"
+  },
+  "keywords": [
+    "repo",
+    "pusher",
+    "save",
+    "time",
+    "Ice",
+    "T"
+  ],
+  "devDependencies": {
+    "rimraf": "^5.0.1"
+  },
+  "author": "MaslowCorporation LTD.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanouvelleecole/ReposPusher/issues"
+  },
+  "homepage": "https://github.com/lanouvelleecole/ReposPusher#readme"
+}
